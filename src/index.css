@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar-outer {
+  width: 20%;
+  height: 100vh;
+  border: 1px solid red;
+  padding: 10px;
+}
+
+.mainbar-outer {
+  width: 80%;
+  height: 100vh;
+  border: 1px solid yellow;
+}
+
+.sidebar-main-head {
+  display: block;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.sidebar-note-bar {
+  margin-top: 5rem;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+}
