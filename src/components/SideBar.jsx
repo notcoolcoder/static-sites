@@ -3,7 +3,7 @@ import React from "react";
 function SideBar() {
   return (
     <div className="sidebar-outer">
-      <span className="sidebar-main-head">Notes App</span>
+      <span className="sidebar-main-head">notes app</span>
       <div className="sidebar-note-bar">
         Notes
       </div>

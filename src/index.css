@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .container {
   display: flex;
 }
@@ -13,6 +17,7 @@
   height: 100vh;
   border: 1px solid red;
   padding: 10px;
+  background-color: #f5f5f5;
 }
 
 .mainbar-outer {
@@ -26,12 +31,15 @@
   display: block;
   font-size: 2rem;
   text-align: center;
+  color: #203562;
+  margin-top: 3rem;
+  text-transform: capitalize;
 }
 
 .sidebar-note-bar {
   margin-top: 5rem;
   padding: 10px;
-  background-color: blue;
+  background-color: #203562;
   color: white;
   font-size: 20px;
   border-radius: 10px;
@@ -41,45 +49,64 @@
   font-size: 25px;
   margin: 10px;
   padding: 5px;
+  color: #203562;
 }
 
 .mainbar-helper-text {
-  color: #303030;
-  font-size: 20px;
+  color: #203562;
+  font-size: 17px;
   font-weight: 300;
   margin: 0 10px;
   padding: 5px;
 }
 
 .show-note-list {
-  /* display: flex; */
-  /* overflow-x: scroll; */
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
 }
 
 .note-list-box {
-  background-color: white;
+  background-color: #f5f5f5;
   padding: 15px;
   margin: 10px;
   border-radius: 10px;
-  width: 400px;
+  width: 20%;
+  flex: 0 0 auto;
+  margin-right: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .note-list-title {
   display: flex;
   justify-content: space-between;
   color: #203562;
-  padding: 10px;
+  padding: 0 5px;
   margin: 0 10px;
-  font-size: 19px;
+  font-size: 24px;
+  font-family: 600;
 }
 
 .note-list-title > div > span {
-  margin-right:5px;
-  padding: 3px;
+  margin-right: 5px;
+  padding: 5px;
+  font-size: 16px;
+  font-family: 300;
 }
 
+.note-list-content {
+  color: #303030;
+  padding: 14px;
+  word-wrap: break-word;
+}
 
-.note-list-content{
-    color: #5a5656;
-    padding: 14px;
+.show-time {
+  margin-left: 10px;
+  margin-top: auto;
 }
