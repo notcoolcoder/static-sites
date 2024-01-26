@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import ShowNoteList from "./ShowNoteList";
 
 function MainBarShowNote() {
   return (
-    <div className="mainbar-show-notes-outer"></div>
-  )
+    <div className="mainbar-show-notes-outer">
+      <h4 className="mainbar-note-heading">My Notes</h4>
+      <p className="mainbar-helper-text">Rect</p>
+
+      <ShowNoteList />
+    </div>
+  );
 }
 
-export default MainBarShowNote
+export default MainBarShowNote;

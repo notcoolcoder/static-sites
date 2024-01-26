@@ -1,12 +1,15 @@
 import React from "react";
 import MainBarInput from "./MainBarInput";
 import MainBarShowNote from "./MainBarShowNote";
+import { Provider } from "../context";
 
 function MainBar() {
   return (
     <div className="mainbar-outer">
-      <MainBarInput />
-      <MainBarShowNote />
+      <Provider>
+        <MainBarInput />
+        <MainBarShowNote />
+      </Provider>
     </div>
   );
 }

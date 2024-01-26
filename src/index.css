@@ -18,6 +18,7 @@
 .mainbar-outer {
   width: 80%;
   height: 100vh;
+  background-color: #e3e8f8;
   border: 1px solid yellow;
 }
 
@@ -34,4 +35,51 @@
   color: white;
   font-size: 20px;
   border-radius: 10px;
+}
+
+.mainbar-note-heading {
+  font-size: 25px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.mainbar-helper-text {
+  color: #303030;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0 10px;
+  padding: 5px;
+}
+
+.show-note-list {
+  /* display: flex; */
+  /* overflow-x: scroll; */
+}
+
+.note-list-box {
+  background-color: white;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.note-list-title {
+  display: flex;
+  justify-content: space-between;
+  color: #203562;
+  padding: 10px;
+  margin: 0 10px;
+  font-size: 19px;
+}
+
+.note-list-title > div > span {
+  margin-right:5px;
+  padding: 3px;
+}
+
+
+.note-list-content{
+    color: #5a5656;
+    padding: 14px;
 }
