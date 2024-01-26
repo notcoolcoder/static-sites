@@ -67,20 +67,17 @@ body {
 }
 
 .note-list-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #f5f5f5;
   padding: 15px;
   margin: 10px;
   border-radius: 10px;
-  width: 20%;
-  flex: 0 0 auto;
-  margin-right: 10px;
-  padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: auto;
+  width: 350px;
   box-sizing: border-box;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .note-list-title {
@@ -103,10 +100,64 @@ body {
 .note-list-content {
   color: #303030;
   padding: 14px;
-  word-wrap: break-word;
+  flex-grow: 1;
+  overflow: hidden;
 }
 
 .show-time {
-  margin-left: 10px;
+  align-self: flex-start;
   margin-top: auto;
+}
+
+.mainbar-input-outer {
+  padding: 30px;
+}
+
+.mainbar-box-outline {
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mainbar-heading-text {
+  font-size: 30px;
+  padding: 1rem 2rem;
+  display: block;
+  color: #203562;
+}
+
+.mainbar-input {
+  color: #203562;
+  padding: 10px;
+  margin: 1rem;
+  font-size: 25px;
+  border: none;
+  background-color: #f5f5f5;
+  outline: none;
+  display: block;
+}
+
+.mainbar-input:nth-child(2)::placeholder {
+  color: #203562;
+}
+
+.mainbar-btn {
+  background-color: #203562;
+  color: #f5f5f5;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  border: none;
+  outline: none;
+}
+
+.mb{
+  margin-bottom: 3rem;
+}
+
+.mainbar-btn:hover {
+  cursor: pointer;
 }

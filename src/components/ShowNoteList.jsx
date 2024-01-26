@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { StoreLocal } from "../context";
-import { fetchs } from "../assets/Data";
 
 function timeAgo(timestamp) {
   const now = new Date();
@@ -28,6 +27,14 @@ function timeAgo(timestamp) {
   }
 }
 
+function truncateText(text, maxLength) {
+  if (text.length > maxLength) {
+    return text.slice(0, maxLength - 3) + "..."; // Subtract 3 to account for the length of the ellipsis
+  } else {
+    return text;
+  }
+}
+
 function ShowNoteList() {
   const storeData = useContext(StoreLocal);
   console.log("storeData:", storeData.store);
@@ -36,15 +43,20 @@ function ShowNoteList() {
     console.log("id:", id);
     storeData.dispatch({ type: "EDIT", value: id });
   };
+
+  const handleDelete = (id) => {
+    console.log("id:", id);
+    storeData.dispatch({ type: "DELETE", value: id });
+  };
   return (
     <div className="show-note-list">
-      {fetchs.map((note, index) => (
+      {storeData?.store?.note?.map((note, index) => (
         <div className="note-list-box" key={index}>
           <div className="note-list-title">
-            {note.title}
+            {truncateText(note.title, 8)}
             <div>
               <span onClick={() => handleEdit(index)}>Edit</span>
-              <span>Delete</span>
+              <span onClick={() => handleDelete(index)}>Delete</span>
             </div>
           </div>
           <div className="note-list-content">{note.content}</div>
