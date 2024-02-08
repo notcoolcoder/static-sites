@@ -1,1 +1,1 @@
-Live - https://test-host-i3mv.onrender.com/
+Live - git remote set-url origin git@test.github.com:notcoolcoder/static-sites.git
